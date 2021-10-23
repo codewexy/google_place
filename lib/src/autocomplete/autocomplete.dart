@@ -109,6 +109,7 @@ class Autocomplete {
           : _unencodedPath,
       queryParameters,
     );
+    print('uri>>$uri');
     var response = await NetworkUtility.fetchUrl(uri, headers: headers);
     if (response != null) {
       return AutocompleteResponse.parseAutocompleteResult(response);
